@@ -1,0 +1,9 @@
+<h1 style="display: flex; justify-content: center">To Do List</h1>
+<div class="to-do-list-container">
+  <app-item-list *ngFor="let item of toDolistService.toDoList"
+                 [title]="item.title"
+                 [description]="item.description"
+                 [isAccomplished]="true"></app-item-list>
+</div>
+
+<router-outlet></router-outlet>
