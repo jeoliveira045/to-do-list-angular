@@ -1,0 +1,9 @@
+<div class="form-container">
+  <form [formGroup]="tarefaForm" (ngSubmit)="onSubmit()">
+    <label for="title">Titulo da tarefa</label><br>
+    <input id="title" name="title" formControlName="title"><br><br>
+    <label for="description">Descrição da tarefa</label><br>
+    <input id="description" name="description" formControlName="description"><br><br>
+    <button type="submit">Enviar</button>
+  </form>
+</div>

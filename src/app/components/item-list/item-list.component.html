@@ -1,11 +1,14 @@
-<div class="item-list-container">
+<div class="item-list-container" [@removeAnimation]="tarefa?.state">
   <div class="item-list-summary">
-    <h1>{{ title }}</h1>
+    <h1>{{ tarefa?.title }}</h1>
     <div class="item-list-description">
-      <span>{{ description }}</span>
+      <span>{{ tarefa?.description }}</span>
     </div>
   </div>
   <div class="item-list-checkbox-container">
-    <input type="checkbox" [value]="isAccomplished">
+    <input type="checkbox" [value]="tarefa?.isAccomplished">
+  </div>
+  <div class="item-delete-button-container">
+    <button title="excluir" (click)="excluir()">Excluir!</button>
   </div>
 </div>
