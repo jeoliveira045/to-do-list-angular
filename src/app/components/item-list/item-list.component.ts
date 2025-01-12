@@ -13,7 +13,7 @@ const millisseconds = '1000ms'
   animations: [
     trigger('removeAnimation', [
       state('present', style({opacity: 1, transform: 'translateX(0)'})),
-      state('removed', style({opacity: 0, transform: 'translateX(-100)'})),
+      state('removed', style({opacity: 0, transform: 'translateX(100%)'})),
       transition('present => removed', animate(`${millisseconds} ease-out`))
     ])
   ]
